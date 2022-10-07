@@ -1,5 +1,6 @@
 // Funciones CRUD
 
+
 // 1- Mostrar
 function mostrarProductos() {
     console.log(productos)
@@ -15,7 +16,7 @@ function agregarProducto() {
 function modificarProducto() {
     const id = getId()
     const existe = checkId(id)
-    const datos = existe && solicitarDatos(id) || undefined
+    const datos = existe && solicitarDatos(id)
 
     existe
         ? productos[datos.id - 1] = datos
@@ -26,7 +27,7 @@ function modificarProducto() {
 function borrarProducto() {
     const id = getId()
     const existe = checkId(id)
-    const indice = existe && getIndex(id) || null
+    const indice = existe && getIndex(id)
 
     existe
         ? productos.splice(indice, 1)
@@ -34,4 +35,15 @@ function borrarProducto() {
 }
 
 // 5- Salir
-function salir() { window.close() }
+function salir() {
+    window.close()
+}
+
+// Error
+function error(opcion) {
+    if (opcion < 1 ||
+        opcion > 5 || isNaN(opcion)) {
+        alert('Opcion inválida')
+        return true
+    }
+}

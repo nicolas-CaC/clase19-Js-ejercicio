@@ -2,13 +2,8 @@ while (iterando) {
 
     const opcion = Number(prompt('Ingresa opcion del 1 al 5'))
 
-    //Error
-    if (opcion < 1 ||
-        opcion > 5 ||
-        isNaN(opcion)) {
-        alert('Opcion inválida')
-        continue
-    }
+    // Error
+    if (error(opcion)) continue
 
     // Mostrar productos
     opcion === 1 && mostrarProductos()
