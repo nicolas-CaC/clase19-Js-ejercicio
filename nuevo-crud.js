@@ -13,7 +13,6 @@ function agregarProducto() {
 
 // 3- Modificar
 function modificarProducto() {
-
     const id = getId()
     const existe = checkId(id)
     const datos = existe && solicitarDatos(id) || undefined
@@ -25,7 +24,6 @@ function modificarProducto() {
 
 // 4- Borrar
 function borrarProducto() {
-
     const id = getId()
     const existe = checkId(id)
     const indice = existe && getIndex(id) || null

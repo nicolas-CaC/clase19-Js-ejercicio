@@ -10,7 +10,8 @@ const solicitarDatos = (id = productos.length + 1) => {
 
 const getId = () => Number(prompt('ingrese el id'))
 
-const checkId = (id) => productos.some(producto => producto.id === id)
+const checkId = (id) => productos
+    .some(producto => producto.id === id)
 
 const getIndex = (id) => productos
     .indexOf(productos
